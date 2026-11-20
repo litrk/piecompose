@@ -9,15 +9,14 @@ Current version: **0.1.12**, tested with **Blender 5.2 LTS**.
 
 ## Features
 
-- Eight fixed radial directions with independent upper and lower button groups.
-- Hold a shortcut, move, and release to select a radial command. Upper/lower buttons accept gestures after the first 0.5 seconds of movement and clicks immediately.
+- Eight fixed radial directions with additional button groups.
 - Submenu links and per-menu keyboard shortcuts.
-- Keyboard shortcut buttons: enter a single combination such as Ctrl+B instead of an operator name.
-- Add supported Blender operator buttons through their right-click context menu (`Add to PieCompose`).
-- Capture writable checkbox properties through Blender RNA, including active object/material, scene/world, viewport and nested settings.
-- Visual slot selection, button movement and swapping in the menu editor.
 - Colored labels for organization and quick recognition.
-- Edit label names/colors across all assigned buttons, or delete labels without clearing each button manually.
+- Right-click a supported Blender operator button and choose `Add to PieCompose`.
+- Create a button with a single key combination such as Ctrl+B or by entering an operator name.
+- Capture writable checkboxes through Blender RNA, including settings for the active object or material, the scene or world, the viewport, and nested settings.
+- Select slots visually and move or swap buttons in the menu editor.
+- Rename or recolor a label across all buttons that use it, or remove it from all buttons at once by deleting it.
 - One configuration file for menus, commands, labels and shortcuts.
 
 ![PieCompose editor with menus, button layout and command settings](docs/screenshots/menu-editor.png)
