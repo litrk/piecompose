@@ -1,0 +1,16 @@
+schema_version = "1.0.0"
+id = "piecompose"
+version = "0.1.12"
+name = "PieCompose"
+tagline = "Build gesture pie menus with extra buttons and color labels"
+maintainer = "PieCompose contributors"
+type = "add-on"
+tags = ["3D View", "User Interface"]
+blender_version_min = "5.2.0"
+license = ["SPDX:GPL-3.0-or-later"]
+
+[permissions]
+files = "Import and export menu configurations selected by the user"
+
+[build]
+paths_exclude_pattern = ["__pycache__/", ".*.pyc", "*.pyc"]

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "settings": {
+    "radialColor": "#141414",
+    "extraColor": "#1c1c1c",
+    "hoverColor": "#185b56",
+    "hoverTextColor": "#dedede",
+    "textColor": "#ababab",
+    "mutedColor": "#929292",
+    "borderColor": "#515151",
+    "backgroundColor": "#3b3b3b",
+    "radius": 15,
+    "fontSize": 14,
+    "padding": 9,
+    "radialWidth": 186,
+    "radialHeight": 35,
+    "extraWidth": 186,
+    "extraHeight": 35,
+    "horizontalDistance": 200,
+    "verticalDistance": 138,
+    "diagonalX": 140,
+    "diagonalY": 85,
+    "blockDistance": 260,
+    "rowGap": 8,
+    "columnGap": 8,
+    "markerMode": "category",
+    "markerSize": 5,
+    "transformColor": "#69bfaf",
+    "viewColor": "#83a9d5",
+    "cursorColor": "#d3ae70",
+    "menuColor": "#b49cd4",
+    "buttonColors": {
+      "radial-2": "#69bfaf"
+    }
+  }
+}

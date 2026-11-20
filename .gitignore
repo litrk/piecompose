@@ -1,0 +1,36 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Personal menu configuration and automatic backups
+/pie-menus.json
+/pie-menus.lock
+/pie-menus.before-import-*.json
+/pie-menus*.bak
+
+# Built archives and personal exported configurations
+/dist/
+
+# Generated screenshots and test logs; keep the web design prototype
+/design-preview/design-qa.md
+/design-preview/*.png
+/design-preview/*.jpg
+/design-preview/*.jpeg
+*.log
+
+# Blender scratch files
+*.blend
+*.blend[0-9]
+*.blend@
+
+# Local editor and operating system files
+/AGENTS.md
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+.env
+.env.*

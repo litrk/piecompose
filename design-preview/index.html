@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pie Menu — оформление</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Pie Menu <span>/ оформление</span></h1>
+    <div class="header-actions">
+      <button id="export-json">Скачать JSON</button>
+      <button id="copy-python" class="primary">Скопировать для Blender</button>
+    </div>
+  </header>
+  <main>
+    <section class="preview" aria-label="Предпросмотр меню">
+      <div class="preview-toolbar">
+        <div class="segmented" aria-label="Фон предпросмотра">
+          <button data-background="grid" aria-pressed="true">Сетка</button>
+          <button data-background="solid" aria-pressed="false">Однотонный</button>
+        </div>
+        <label class="zoom-label">Масштаб <select id="zoom"><option value="0.75">75%</option><option value="1" selected>100%</option><option value="1.25">125%</option></select></label>
+      </div>
+      <div id="viewport" class="viewport">
+        <div class="grid" aria-hidden="true"></div>
+        <div id="menu-stage" class="menu-stage">
+          <div class="menu-center"><span>Pie Menu</span><i></i></div>
+          <div id="top-block" class="extra-block top"></div>
+          <div id="radial"></div>
+          <div id="bottom-block" class="extra-block bottom"></div>
+        </div>
+      </div>
+      <footer class="preview-footer"><span id="selection" role="status">Наведи курсор на кнопку, чтобы проверить подсветку</span><span id="actual-scale">100%</span></footer>
+    </section>
+    <aside class="settings" aria-label="Настройки оформления">
+      <div class="settings-heading"><h2>Оформление</h2><button id="reset" class="text-button">Сбросить</button></div>
+      <label class="preset-label" for="preset">Отправная точка</label>
+      <select id="preset"><option value="reference">По референсу</option><option value="prototype">Текущий прототип</option><option value="custom" disabled>Свои настройки</option></select>
+      <fieldset id="marker-controls">
+        <legend>Цветные метки</legend>
+        <label class="preset-label" for="marker-mode">Раскраска</label>
+        <select id="marker-mode"><option value="none">Без меток</option><option value="category" selected>По категориям</option><option value="custom">Свой цвет каждой кнопки</option></select>
+        <div class="control marker-size-control"><div class="control-heading"><label for="marker-size">Диаметр точки</label><output id="marker-size-value" for="marker-size">5 px</output></div><input id="marker-size" type="range" min="3" max="9" step="1" value="5"></div>
+        <div id="category-colors"></div>
+        <div id="button-color-control" hidden>
+          <p id="selected-button-name">Нажми кнопку в меню, чтобы выбрать её цвет.</p>
+          <div class="color-control"><label for="button-color">Цвет кнопки</label><input id="button-color" type="color" value="#69bfaf" disabled></div>
+        </div>
+      </fieldset>
+      <form id="controls" onsubmit="return false"></form>
+      <div class="settings-footer">
+        <p>Размеры указаны в пикселях при масштабе 100%. Изменения сохраняются в этом браузере.</p>
+        <button id="import-json">Загрузить JSON</button>
+        <input type="file" id="import-file" accept="application/json,.json" hidden>
+      </div>
+    </aside>
+  </main>
+  <div id="notice" class="notice" role="status" hidden></div>
+  <dialog id="export-dialog">
+    <form method="dialog"><h2>Параметры для Blender</h2><p>Выдели и скопируй словарь. Его значения можно использовать при переносе оформления.</p><textarea id="python-output" readonly aria-label="Словарь Python"></textarea><button class="primary">Закрыть</button></form>
+  </dialog>
+</body>
+</html>
